@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="cvApp">
+<head lang="fr">
+    <meta charset="UTF-8">
+    <title>Léo le bg</title>
+
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/cv.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/bower_components/flag-icon-css/css/flag-icon.min.css" media="all">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
+
+</head>
+<body>
+
+<div ui-view="header"></div>
+<div ui-view="content"></div>
+
+<script src="/js/app.js"></script>
+<script src="/js/header-ctrl.js"></script>
+<script src="/js/translations.js"></script>
+<script src="/js/education-ctrl.js"></script>
+
+</body>
+</html>
