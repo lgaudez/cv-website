@@ -14,11 +14,12 @@
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse " >
             <ul class="nav navbar-nav text-center margin-left-50">
-                <li ui-sref-active="active"><a ui-sref="main.cv.me" > {{ 'header.about_me' | translate }}</a></li>
-                <li ui-sref-active="active"> <a ui-sref="main.cv.skills"> {{ 'header.skills' | translate }}</a></li>
-                <li ui-sref-active="active"><a ui-sref="main.cv.education"> {{ 'header.education' | translate }}</a></li>
-                <li ui-sref-active="active"><a ui-sref="main.cv.work"> {{ 'header.work' | translate }} </a></li>
-                <li ui-sref-active="active"><a ui-sref="main.cv.contact"> {{ 'header.contact' | translate }} </a></li>
+                <li ui-sref-active="active"><a ui-sref="main.cv.show.me" > {{ 'header.about_me' | translate }}</a></li>
+                <li ui-sref-active="active"> <a ui-sref="main.cv.show.skill" > {{ 'header.skills' | translate }}</a></li>
+                <li ui-sref-active="active"><a ui-sref="main.cv.show.education"> {{ 'header.education' | translate }}</a></li>
+                <li ui-sref-active="active"><a ui-sref="main.cv.show.work"> {{ 'header.work' | translate }} </a></li>
+                <li ui-sref-active="active"><a ui-sref="main.contact"> {{ 'header.contact' | translate }} </a></li>
+                <!--<li ui-sref-active="active"><a ui-sref="main.cv"> cv</a></li>-->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="" ng-click="changeLanguage('fr')"> <span class="flag-icon flag-icon-fr"></span> Fr </a></li>

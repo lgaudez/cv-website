@@ -1,5 +1,7 @@
 angular.module('cvApp').controller('HeaderController',
-    ['$translate', '$scope', 'tmhDynamicLocale', function($translate, $scope, tmhDynamicLocale) {
+    ['$translate', '$scope', 'tmhDynamicLocale', '$uiViewScroll','$anchorScroll', '$document',
+        function($translate, $scope, tmhDynamicLocale, $uiViewScroll, $anchorScroll, $document) {
+
         //Set detfault locale to french
         tmhDynamicLocale.set("fr");
 

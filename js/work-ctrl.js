@@ -1,19 +1,19 @@
-angular.module('cvApp').controller('EducCtrl',
+angular.module('cvApp').controller('WorkCtrl',
     ['$scope', function($scope) {
 
-        $scope.educations = [];
+        $scope.works = [];
 
         var nb = 4;
 
         for(var i = 1; i <= nb; i++){
-            var prefix = 'education.education' + i;
-            $scope.educations.push({
+            var prefix = 'work.work' + i;
+            $scope.works.push({
                 start: prefix + '.start',
                 end : prefix + '.end',
-                institute : prefix + '.institute',
+                company : prefix + '.company',
                 desc : prefix + '.desc',
                 title : prefix + '.title'
             })
         }
 
-}]);
+    }]);
