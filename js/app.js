@@ -71,7 +71,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
             url: "work"
         })
         .state('main.contact', {
-            url: "contact",
+            url: "/contact",
             views : {
                 '@' : {
                     templateUrl: '/template/contact.html'

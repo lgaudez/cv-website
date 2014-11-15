@@ -1,25 +1,25 @@
 angular.module('cvApp').controller('CvCtrl',
-    ['$scope' , '$rootScope', '$document', '$timeout', function($scope, $rootScope, $document, $timeout) {
+    ['$scope' , '$rootScope', '$document', '$timeout', '$state', function($scope, $rootScope, $document, $timeout, $state) {
 
         //Scroll to right view
         $scope.$on('$stateChangeSuccess',
             function(event, toState, toParams, fromState, fromParams){
-                console.log(toState.name);
-                var tmp = toState.name.split(".");
-                var id  = "#" + (tmp[tmp.length - 1]);
-                $timeout(function(){
-                    scrollTo(id)
-                }, 0);
+                if(toState.name.indexOf("main.cv.show.") > -1){
+                    var tmp = toState.name.split(".");
+                    var id  = "#" + (tmp[tmp.length - 1]);
+                    $timeout(function(){
+                        scrollTo(id)
+                    }, 0);
+                }
             }
         );
 
-        $rootScope.$on('$viewContentLoading',
-            function(event, viewConfig){
-                console.log(event, viewConfig)
-                // Access to all the view config properties.
-                // and one special property 'targetView'
-                // viewConfig.targetView
-            });
+        // whn scrolling over an subview is detected, update $state
+        $scope.$on('duScrollspy:becameActive', function($event, $element){
+                var state = "main.cv.show." + $element.data('du-scrollspy') ;
+                $state.go(state,function(){},{notify : false})
+            }
+        );
 
         function scrollTo(id){
             var elem = angular.element( document.querySelector(id) );
