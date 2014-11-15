@@ -3,6 +3,8 @@
     "version": "0.1.0",
     "devDependencies": {
         "grunt": "~0.4.2",
-        "grunt-serve": "~0.1.6"
+        "grunt-serve": "~0.1.6",
+        "grunt-contrib-clean" : "~0.6.0",
+        "grunt-bower-task" : "~0.4.0"
     }
 }
