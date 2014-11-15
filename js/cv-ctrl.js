@@ -1,12 +1,15 @@
 angular.module('cvApp').controller('CvCtrl',
-    ['$scope' , '$rootScope', '$document', function($scope, $rootScope, $document) {
+    ['$scope' , '$rootScope', '$document', '$timeout', function($scope, $rootScope, $document, $timeout) {
 
+        //Scroll to right view
         $scope.$on('$stateChangeSuccess',
             function(event, toState, toParams, fromState, fromParams){
                 console.log(toState.name);
                 var tmp = toState.name.split(".");
                 var id  = "#" + (tmp[tmp.length - 1]);
-                scrollTo(id)
+                $timeout(function(){
+                    scrollTo(id)
+                }, 0);
             }
         );
 
@@ -20,7 +23,7 @@ angular.module('cvApp').controller('CvCtrl',
 
         function scrollTo(id){
             var elem = angular.element( document.querySelector(id) );
-            $document.scrollToElement(elem, 50, 0);
+            $document.scrollToElement(elem, 50, 1000);
         }
 
     }]);
